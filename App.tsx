@@ -32,7 +32,7 @@ type ProductsScreenProps = {
   route: RouteProp<StackParams, 'ProductScreen'>
 }
 
-//The screen their all my products are added
+//Flatlist screen
 const CatalogListScreen = ({ navigation }: FlatListScreenProps) => {
   const [userData, setUserData] = useState<Item[]>([]);
 
@@ -45,7 +45,6 @@ const CatalogListScreen = ({ navigation }: FlatListScreenProps) => {
       })
   }, []);
 
-  //Flatlist whit all products
   return (
     <View>
       <FlatList
@@ -66,7 +65,7 @@ const CatalogListScreen = ({ navigation }: FlatListScreenProps) => {
   );
 }
 
-//Display pressed product
+//Display the pressed product
 const ProductScreen = ({ route }: ProductsScreenProps) => {
   return (
     <View style={styles.containerProductInfo}>
@@ -137,7 +136,7 @@ function DiscountPrice(productPrice: number): number {
 }
 
 
-//design and functionallity for my Product card
+// Product card
 const ItemCard = ({ item, navigation }: listItemProps) => {
 
   return (
